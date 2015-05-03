@@ -1,0 +1,6 @@
+[submodule "msaCommon"]
+	path = msaCommon
+	url = https://ehlersd@github.com/DoubleNode/msaCommon.git
+[submodule "msaCalculator"]
+	path = msaCalculator
+	url = https://ehlersd@github.com/DoubleNode/msaCalculator.git
