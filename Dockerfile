@@ -1,5 +1,5 @@
 # docker build -t msa-nginx .
-# docker create --name msaServerCalculator -P msa-nginx
+# docker create --name msaClientCalculator -P msa-nginx
 #
 
 FROM marvambass/nginx-ssl-secure
