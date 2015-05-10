@@ -78,10 +78,10 @@ try
 
     //print "TP[".__FILE__.":".__LINE__."]<br />\n";
 	$client->ping();
-    print "ping\n";
+    print "ping<br />\n";
 		
     $sum = $client->add(1,1);
-	print "1+1=$sum\n";
+	print "1+1=$sum<br />\n";
 	
 	$work = new Work();
 	
@@ -92,11 +92,11 @@ try
 	try 
 	{
 	    $client->calculate(1, $work);
-	    print "Whoa! We can divide by zero?\n";
+	    print "Whoa! We can divide by zero?<br />\n";
 	} 
 	catch (InvalidOperation $io) 
 	{
-	    print "InvalidOperation: $io->why\n";
+	    print "InvalidOperation: $io->why<br />\n";
 	}
 	
 	$work->op       = Operation::SUBTRACT;
@@ -104,10 +104,10 @@ try
 	$work->num2    = 10;
 	
 	$diff = $client->calculate(1, $work);
-	print "15-10=$diff\n";
+	print "15-10=$diff<br />\n";
 	
 	$log = $client->getStruct(1);
-	print "Log: $log->value\n";
+	print "Log: $log->value<br />\n";
 	
 	// And finally, we close the thrift connection
 	$transport->close();
@@ -115,7 +115,7 @@ try
 catch (TException $tx) 
 {	
 	// a general thrift exception, like no such server
-	echo "ThriftException: ".$tx->getMessage()."\r\n";
+	echo "ThriftException: ".$tx->getMessage()."<br />\n";
 }
 
 ?>
